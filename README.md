@@ -4,7 +4,7 @@ Earning App is an Android application that allows users to earn coins through va
 
 ## Demo
 
-![App Demo](https://res.cloudinary.com/drvwdwlzx/image/upload/v1748191685/0518_2_kt0syh.gif)
+![App Demo](app/src/main/res/drawable/demo.gif)
 
 
 
