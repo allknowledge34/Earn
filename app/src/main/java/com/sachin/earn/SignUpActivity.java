@@ -45,6 +45,15 @@ public class SignUpActivity extends AppCompatActivity {
         progressDialog.setTitle("Creating Your Account");
         progressDialog.setMessage("Your Account Is Creating");
 
+        binding.login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SignUpActivity.this, LoginActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
         binding.btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -113,14 +122,7 @@ public class SignUpActivity extends AppCompatActivity {
                 }
             }
         });
-        binding.login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(SignUpActivity.this, LoginActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        });
+
     }
     private void setStatusBarColor() {
         Window window = getWindow();

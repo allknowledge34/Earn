@@ -15,10 +15,15 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.sachin.earn.Adapters.TasksAdapter;
+import com.sachin.earn.FlipCardActivity;
+import com.sachin.earn.GuessNumberActivity;
+import com.sachin.earn.LuckyActivity;
 import com.sachin.earn.Models.TasksModel;
 import com.sachin.earn.Models.UserModel;
 import com.sachin.earn.R;
 import com.sachin.earn.RedeemActivity;
+import com.sachin.earn.ReferActivity;
+import com.sachin.earn.SpinnerActivity;
 import com.sachin.earn.databinding.FragmentHomeBinding;
 import com.squareup.picasso.Picasso;
 
@@ -73,6 +78,26 @@ public class HomeFragment extends Fragment {
                 startActivity(intent);
             }
         });
+
+        binding.button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Class<?>[] activities = new Class[]{
+                        SpinnerActivity.class,
+                        ReferActivity.class,
+                        LuckyActivity.class,
+                        GuessNumberActivity.class,
+                        FlipCardActivity.class
+                };
+
+                int randomIndex = new java.util.Random().nextInt(activities.length);
+                Class<?> randomActivity = activities[randomIndex];
+                Intent intent = new Intent(view.getContext(), randomActivity);
+                view.getContext().startActivity(intent);
+            }
+        });
+
         return binding.getRoot();
 
 

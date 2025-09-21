@@ -188,7 +188,7 @@ public class RedeemActivity extends AppCompatActivity {
             paymentMethodLog.setImageResource(R.drawable.paypal);
             paymentMethod.setText("Paypal");
             edtAmount.setText(String.valueOf(coin));
-            edtNumber.setHint("Enter your email");
+            edtNumber.setHint("Enter Paypal number");
             dialog.show();
         } else {
             Toast.makeText(RedeemActivity.this, message, Toast.LENGTH_SHORT).show();
@@ -198,9 +198,9 @@ public class RedeemActivity extends AppCompatActivity {
     public void checkCoinPaytm(String message, int coin) {
         if (availableCoin >= coin) {
             paymentMethodLog.setImageResource(R.drawable.phonepe);
-            paymentMethod.setText("Paytm");
+            paymentMethod.setText("PhonePe");
             edtAmount.setText(String.valueOf(coin));
-            edtNumber.setHint("Enter Paytm number");
+            edtNumber.setHint("Enter PhonePe number");
             dialog.show();
         } else {
             Toast.makeText(RedeemActivity.this, message, Toast.LENGTH_SHORT).show();
